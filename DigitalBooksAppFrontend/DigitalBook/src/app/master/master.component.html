@@ -1,0 +1,72 @@
+<!-- <table border="1">
+    <tr>
+        <td><a [routerLink]="['home']">Home</a></td>
+        <td><a [routerLink]="['customer/add']">Customer</a></td>
+        <td><a [routerLink]="['supplier/add']">Supplier</a></td>
+        <a class="navbar-brand" href="#">DigitalBook</a>
+    </tr>
+</table>
+
+ -->
+ 
+ <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <img [src]="logo" alt="Logo" width="100px" height="60" class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="#">E-Book</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <form class="d-flex" role="LogInform">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" [routerLink]="['author/add']">Author</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"  [routerLink]="['reader']">Reader</a>
+                            </li>
+            
+                            <li class="nav-item">
+                                <a class="nav-link" style="cursor:pointer"  (click)="Logout()">Logout</a>
+                            </li>
+                        </ul>
+              </form>
+            
+        </div>
+    </div>
+</nav>-->
+<nav class="navbar navbar-expand-lg" style="background-color:snow">
+    <div class="container">
+       
+        <img [src]="logo" alt="Logo" width="200px" height="60" class="d-inline-block align-text-top">
+        
+        <form class="d-flex" role="LogInform">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" [routerLink]="['author/add']">Author</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"  [routerLink]="['reader']">Reader</a>
+                            </li>
+            
+                            <li class="nav-item">
+                                <a class="nav-link" style="cursor:pointer"  (click)="Logout()">Logout</a>
+                            </li>
+                        </ul>
+              </form>
+            
+    </div>
+</nav>
+<div class="row" style="margin-top: 1px;">
+    <router-outlet></router-outlet>
+</div>
+

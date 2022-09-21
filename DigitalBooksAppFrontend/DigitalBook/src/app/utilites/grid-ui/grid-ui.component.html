@@ -1,0 +1,18 @@
+<table  style="overflow-y: scroll;">
+    <tr>
+        <th *ngFor="let col of gridColumns" style="width: 200px;">
+            {{col.colName}}
+        </th>
+    </tr>
+    <tr *ngFor="let colObj of gridData">
+        <td *ngFor="let col of gridColumns" style="width:200px">
+            {{colObj[col.colName]}}
+        </td>
+        <td>
+            <a (click)="selectedGrid(colObj)" class="btn btn-outline btn-warning">Edit</a> 
+        </td>
+        <td>
+           <a (click)="deletedGrid(colObj)" class="btn btn-outline btn-warning">Delete</a>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-header">
+        Search Books
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-2"><label>Title</label></div>
+            <div class=col-sm-3>
+                <input class="form-control" type="text" placeholder="Enter title" required/>
+                
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2"><label>Author</label></div>
+            <div class=col-sm-3>
+                <input class="form-control" type="text" placeholder="Enter author name" required/>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2"><label>Publisher</label></div>
+            <div class=col-sm-3>
+                <input class="form-control" type="text" placeholder="Enter Publisher"  required/>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2"><label>Released Date</label></div>
+            <div class=col-sm-3>
+                <input class="form-control" type="date" required/>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2"><label hidden>Search</label></div>
+            <div class=col-sm-6>
+                <input type="button" class="btn btn-outline btn-warning" style="right:40px;" value="Search Books" (click)="searchbk()"/>
+            </div>
+        </div>
+      </div>
+     <div class="card">
+        <!--<app-grid-ui></app-grid-ui>-->
+        <table>
+            <tr>
+                <td>Title</td>
+                <td>Author</td>
+                <td>Publisher</td>
+                <td>Released Date</td>
+            </tr>
+            <tr *ngFor="let bk of SearchBookModels">
+                <td>{{bk.title}}</td>
+                <td>{{bk.author}}</td>
+                <td>{{bk.publisher}}</td>
+                <td>{{bk.releaseddate}}</td>
+            </tr>
+        </table> 
+    </div>
+</div>

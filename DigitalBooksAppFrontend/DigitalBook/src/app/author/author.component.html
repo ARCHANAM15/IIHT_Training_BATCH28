@@ -1,0 +1,44 @@
+<div class=row style="padding-top:35px ;">
+    <div class="col-4 m-auto">
+        <div class="card">
+            <div class="card-title">
+                <h3 style="color: black;padding-left: 20px;">Login</h3>
+            </div>
+            <!--<form>-->
+                <div class="card-body">
+                    <div class="form-group col-12">
+                        <label>UserName</label>
+                        <input [(ngModel)]="UserDataModel.userName" class="form-control" type="email" required  name="userName">
+                    </div>
+                    <div class="form-group col-12">
+                        <label>Password</label>
+                        <input  [(ngModel)]="UserDataModel.password" class="form-control" type="password" required >
+                    </div>
+                    <div class="form-group col-12">
+                        <br>
+                        <div class="row">
+                            <div class="container">
+                                
+                              <button type="button" class="btn btn-outline btn-warning" (click)="loginUser()" style="width: 100%;">Login</button>
+                           </div>
+                            <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="container">
+                           <p>New to BOOKSTORE</p>
+                           <a class="nav-link active" aria-current="page" class="btn-outline"  [routerLink]="['register']">Register</a>
+                        </div>
+                    </div>
+
+                    
+        
+                </div>
+        
+             <!--</form>-->
+        
+        </div>
+    </div>
+    </div>
+    

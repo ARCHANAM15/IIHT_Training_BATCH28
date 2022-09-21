@@ -1,0 +1,82 @@
+<div class="card">
+    <div class="card-header">
+        Create Book
+    </div>
+    
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2"><label>Title</label></div>
+                <div class=col-sm-3>
+                    <input [(ngModel)]="BooksModel.title" type="text" class="form-control"  required>
+                </div>
+                <div class="col-sm-2">
+                    <label>Category</label>
+                </div>
+                <div class=col-sm-3>
+                    <input [(ngModel)]="BooksModel.category" type="text" required class="form-control">
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-2"><label>Price</label></div>
+                <div class=col-sm-3>
+                    <input [(ngModel)]="BooksModel.price" type="text" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <label>Publisher</label>
+                </div>
+                <div class=col-sm-3>
+                    <input [(ngModel)]="BooksModel.publisher" type="text" required class="form-control">
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-2"><label>Active</label></div>
+                <div class=col-sm-3>
+                    <input [(ngModel)]="BooksModel.active" type="text" required class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <label>Content</label>
+                </div>
+                <div class=col-sm-3>
+                    <textarea [(ngModel)]="BooksModel.content" class="form-control"></textarea>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-2">
+                    <label>Image</label>
+                </div>
+                <div class=col-sm-3>
+                    <input type="file" id="myFile" name="filename">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-sm-9"></div>
+            <div class="col-sm-3">
+                <input type="button" class="btn btn-outline btn-warning" style="width:35%;" value="Add Books"
+                    (click)="Add()" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">
+                <h5>List of Books</h5>
+            </div>
+            <app-grid-ui
+                [grid-columns]="[{'colName':'id'},{'colName':'title'},{'colName':'category'},{'colName':'price'},{'colName':'publisher'},{'colName':'active'},{'colName':'content'}]"
+                [grid-data]="BooksModels" (grid-selected)="EditBook($event)" (grid-deleted)="DeleteCustomer($event)">
+                - </app-grid-ui>
+        </div>
+    </div>
+
+</div>
